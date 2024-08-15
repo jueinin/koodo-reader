@@ -1,0 +1,25 @@
+{
+    "name": "Node.js Development",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash",
+            },
+            "extensions": [
+                 "ms-azuretools.vscode-docker",
+                "esbenp.prettier-vscode",
+             "dbaeumer.vscode-eslint"
+            ],
+        },
+        
+        
+    },
+    
+    "forwardPorts": [3000],
+    "postCreateCommand": "yarn install",
+    "remoteUser": "node"
+}

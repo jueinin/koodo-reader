@@ -1,12 +1,19 @@
 import { restore } from "./restoreUtil";
 import StorageUtil from "../serviceUtils/storageUtil";
-
+import {AuthType, createClient} from 'webdav'
 class WebdavUtil {
   static UploadFile = async (blob: any) => {
     return new Promise<boolean>(async (resolve, reject) => {
       let { url, username, password } = JSON.parse(
         StorageUtil.getReaderConfig("webdav_token") || "{}"
       );
+      const client = createClient(url, {username, password, authType: AuthType.Password})
+      if ((await client.exists("/KoodoReader")) === false) {
+        await client.createDirectory("/KoodoReader");
+      }
+      await client.putFileContents('/KoodoReader/data.zip', blob, {overwrite: true})
+      return true
+      debugger
       const fs = window.require("fs");
       const path = window.require("path");
       const { ipcRenderer } = window.require("electron");
