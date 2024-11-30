@@ -1,7 +1,7 @@
 import { unzipBook, unzipConfig, unzipBookWeb, unzipConfigWeb } from "./common";
 import { isBrowser } from "react-device-detect";
 
-export const restoreWwb = (file: File, isSync = false) => {
+export const restoreWeb = (file: File, isSync = false) => {
   return new Promise<boolean>(async (resolve) => {
     let zip = new (window as any).JSZip();
     zip.loadAsync(file)
@@ -28,7 +28,7 @@ export const restoreWwb = (file: File, isSync = false) => {
 }
 
 export const restore = (file: File, isSync = false) => {
-  if (isBrowser) return restoreWwb(file, isSync)
+  if (isBrowser) return restoreWeb(file, isSync)
   return new Promise<boolean>(async (resolve, reject) => {
     const fs = window.require("fs");
     const path = window.require("path");
