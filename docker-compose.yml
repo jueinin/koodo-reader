@@ -2,9 +2,16 @@ version: '3.5'
 services:
   koodo:
     container_name: koodo
+    # environment:
+    #   - PROXY_URL=http://172.17.0.1:20171
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "80:80/tcp"
+    # ports:
+    #   - "80:80/tcp"
     restart: unless-stopped
+
+networks:
+  default:
+    external: true
+    name: my-network
