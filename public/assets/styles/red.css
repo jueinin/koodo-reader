@@ -1,15 +1,15 @@
 .delete-digest-button,
-.add-dialog-comfirm,
+.add-dialog-confirm,
 .backup-page-backup-selector,
-.delete-dialog-comfirm,
+.delete-dialog-confirm,
 .book-item-config,
 .book-cover-item-config,
 .side-menu-selector-container,
 .download-desk-button,
-.edit-dialog-comfirm,
+.edit-dialog-confirm,
 .change-location-button,
-.token-dialog-comfirm,
-.voice-add-comfirm,
+.token-dialog-confirm,
+.voice-add-confirm,
 .new-version-open,
 .update-dialog-container-button,
 .import-from-local,
@@ -24,6 +24,7 @@
 
 .header-search-box,
 .header-search-box::placeholder,
+.feedback-dialog-content-box::placeholder,
 .header-search-text,
 .card-list-item-show-more {
   color: rgba(241, 100, 100, 0.8) !important;

@@ -45,7 +45,7 @@
   - 漫画 (**.cbr**, **.cbz**, **.cbt**, **.cb7**)
   - 富文本 (**.md**, **.docx**)
   - FB2 (**.fb2**)
-  - 超文本 (**.html**, **.xml**, **.xhtml**, **.mhtml**, **.htm**, **.htm**)
+  - 超文本 (**.html**, **.xml**, **.xhtml**, **.mhtml**, **.htm**)
 - 支持 **Windows**，**macOS**，**Linux** 和 **网页版**
 - 备份数据到 **OneDrive**, **Google Drive**, **Dropbox**, **FTP**, **SFTP**, **WebDAV**, **S3**, **S3 Compatible**
 - 自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步
@@ -68,32 +68,11 @@ scoop bucket add extras
 scoop install extras/koodo-reader
 ```
 
-- 使用 Winget 安装：
-
-```shell
-winget install -e AppbyTroye.KoodoReader
-```
-
-- 使用 Homebrew 安装：
-
-```shell
-brew install --cask koodo-reader
-```
-
 - 使用 Docker 安装：
 
 ```bash
-docker-compose up -d
+docker run -d -p 80:80 --name koodo-reader ghcr.io/koodo-reader/koodo-reader:master
 ```
-
-- 使用 Flathub 安装：
-
-```shell
-flatpak install flathub io.github.troyeguo.koodo-reader
-flatpak run io.github.troyeguo.koodo-reader
-```
-
-<a href="https://flathub.org/apps/details/io.github.troyeguo.koodo-reader"><img height="50" alt="Download on Flathub" src="https://flathub.org/assets/badges/flathub-badge-en.png"/></a>
 
 ## 截图
 

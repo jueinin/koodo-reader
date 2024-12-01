@@ -43,7 +43,7 @@
   - FictionBook (**.fb2**)
   - Comic book archive (**.cbr**, **.cbz**, **.cbt**, **.cb7**)
   - Rich text (**.md**, **.docx**)
-  - Hyper Text (**.html**, **.xml**, **.xhtml**, **.mhtml**, **.htm**, **.htm**)
+  - Hyper Text (**.html**, **.xml**, **.xhtml**, **.mhtml**, **.htm**)
 - Platform support: **Windows**, **macOS**, **Linux** and **Web**
 - Save your data to **OneDrive**, **Google Drive**, **Dropbox**, **FTP**, **SFTP**, **WebDAV**, **S3**, **S3 Compatible**
 - Customize the source folder and synchronize among multiple devices using OneDrive, iCloud, Dropbox, etc.
@@ -67,32 +67,11 @@ scoop bucket add extras
 scoop install extras/koodo-reader
 ```
 
-- Install with Winget:
-
-```shell
-winget install -e AppbyTroye.KoodoReader
-```
-
-- Install with Homebrew:
-
-```shell
-brew install --cask koodo-reader
-```
-
 - Install with Docker:
 
 ```bash
-docker-compose up -d
+docker run -d -p 80:80 --name koodo-reader ghcr.io/koodo-reader/koodo-reader:master
 ```
-
-- Install with Flathub:
-
-```shell
-flatpak install flathub io.github.troyeguo.koodo-reader
-flatpak run io.github.troyeguo.koodo-reader
-```
-
-<a href="https://flathub.org/apps/details/io.github.troyeguo.koodo-reader"><img height="50" alt="Download on Flathub" src="https://flathub.org/assets/badges/flathub-badge-en.png"/></a>
 
 ## Screenshot
 
